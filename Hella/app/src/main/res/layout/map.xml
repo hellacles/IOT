@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MapActivity">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_above="@+id/bottomLayout"
+                android:layout_margin="10dp"
+                android:background="@color/cardview_light_background"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/dispatchText"
+                    android:layout_width="55dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:text="신규배차" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/startSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical" />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/bottomLayout"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="bottom"
+                android:background="@color/cardview_light_background"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textBottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:text="픽업 5분 남음"
+                    android:layout_margin="20dp"
+                    android:textSize="20sp"/>
+
+                <Button
+                    android:id="@+id/storeBtn"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="20dp"
+                    android:text="가게 도착"
+                    />
+
+                <TextView
+                    android:id="@+id/textMiddle"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:text="미스터피자 강남점"
+                    android:layout_margin="20dp"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/helpBtn"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="20dp"
+                    android:text="도움 요청"
+                    />
+
+                <Button
+                    android:id="@+id/storeCallBtn"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="20dp"
+                    android:text="전화 연결"
+                    />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </fragment>
+
+</RelativeLayout>
